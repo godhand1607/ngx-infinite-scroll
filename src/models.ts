@@ -31,6 +31,7 @@ export interface IScrollState {
 
 export interface IResolver {
   container: ContainerRef;
+  nativeElement: ContainerRef;
   isWindow: boolean;
   axis: any;
 }

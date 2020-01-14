@@ -91,12 +91,13 @@ export function extractHeightPropKeys(axis: AxisResolver) {
 
 export function extractHeightForElement({
   container,
+  nativeElement,
   isWindow,
   axis
 }: IResolver) {
   const { offsetHeightKey, clientHeightKey } = extractHeightPropKeys(axis);
   return getElementHeight(
-    container,
+    container || nativeElement,
     isWindow,
     offsetHeightKey,
     clientHeightKey
